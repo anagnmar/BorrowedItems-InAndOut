@@ -9,7 +9,8 @@ namespace InAndOut.Models
 {
 	public class Item
 	{
-	// public int Id { get; set; }
+
+	 //	public int Id { get; set; }
 
 		private int id;
 

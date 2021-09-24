@@ -12,43 +12,41 @@ using InAndOut.Models;
 
 namespace InAndOut.Controllers
 {
-
-	public class ItemController : Controller
+	public class ExpenceseController : Controller
 	{
 		private readonly ApplicationDBContext _db;
 
-		public ItemController(ApplicationDBContext db)
+		public ExpenceseController(ApplicationDBContext db)
 		{
 			_db = db;
 		}
 
-		[HttpGet]
 		public IActionResult Index()
 		{
-			IEnumerable<Item> objList = _db.Items;
+			IEnumerable<Expencese> expList = _db.Expenceses;
 
-			return View(objList);
+			return View(expList);
 		}
-
-	//	GET: Create
 
 		[HttpGet]
 		public IActionResult Create()
 		{
+
 			return View();
 		}
 
-	//	POST: Create
+		//	POST: Create
 
 		[ValidateAntiForgeryToken]
 		[HttpPost]
-		public IActionResult Create(Item obj)
+		public IActionResult Create(Expencese exp)
 		{
-			_db.Items.Add(obj);
+			_db.Expenceses.Add(exp);
 			_db.SaveChanges();
 
 			return RedirectToAction("Index");
 		}
+
 
 	}
 }

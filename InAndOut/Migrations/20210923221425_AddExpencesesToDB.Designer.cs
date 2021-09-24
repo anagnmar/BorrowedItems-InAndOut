@@ -3,14 +3,16 @@ using InAndOut.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace InAndOut.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210923221425_AddExpencesesToDB")]
+    partial class AddExpencesesToDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -18,7 +20,7 @@ namespace InAndOut.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("InAndOut.Models.Expencese", b =>
+            modelBuilder.Entity("InAndOut.Models.Expenceses", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,7 +35,7 @@ namespace InAndOut.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Expencese");
+                    b.ToTable("Expenceses");
                 });
 
             modelBuilder.Entity("InAndOut.Models.Item", b =>

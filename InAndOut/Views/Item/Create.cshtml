@@ -12,7 +12,7 @@
 		</div>
 
 		<div class="row mb-3">
-			<label asp-for="ItemName" for="itemName" class="col-sm-2 col-form-label"></label>
+			<label asp-for="ItemName" class="col-sm-2 col-form-label"></label>
 			<div class="col-sm-10">
 				<input asp-for="ItemName" type="text" class="form-control"
 					   id="itemName" placeholder="item name">
@@ -20,7 +20,7 @@
 		</div>
 
 		<div class="row mb-3">
-			<label asp-for="Borrower" for="itemName" class="col-sm-2 col-form-label"></label>
+			<label asp-for="Borrower" class="col-sm-2 col-form-label"></label>
 			<div class="col-sm-10">
 				<input asp-for="Borrower" type="text" class="form-control"
 					   id="itemName" placeholder="borrower">
@@ -28,23 +28,26 @@
 		</div>
 
 		<div class="row mb-3">
-			<label asp-for="Lender" for="itemName" class="col-sm-2 col-form-label"></label>
+			<label asp-for="Lender" class="col-sm-2 col-form-label"></label>
 			<div class="col-sm-10">
 				<input asp-for="Lender" type="text" class="form-control"
 					   id="itemName" placeholder="lender">
 			</div>
 		</div>
+
 		<br />
-		<div class="col-auto p-0">		@*text-left*@
-				<input type="submit" class="btn btn-success w-25" value="Create" @*width="75"*@ />
-				@*<button type="submit" class="btn btn-primary">Create</button>*@
-			</div>
+
+		<div class="col-auto p-0">
+			<input type="submit" class="btn btn-success w-25" value="Create" />		@*width="75"*@
+		</div>
+								@*<button type="submit" class="btn btn-primary">Create</button>*@
 
 	</div>
 
 </form>
 
 	<br /> <br />
+
 	<div>
 		<a asp-controller="Item" asp-action="Index" class="btn btn-outline-danger w-50" style="font-size: 1.2rem;" >
 			Back to the List
