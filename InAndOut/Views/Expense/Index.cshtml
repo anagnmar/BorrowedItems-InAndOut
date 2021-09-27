@@ -7,7 +7,7 @@
 			<h2 class="text-primary"> Expenses List </h2>
 		</div>
 		<div class="col-5 text-lg-right">
-			<a class="btn btn-primary" asp-controller="Expense" asp-action="Create">
+			<a asp-controller="Expense" asp-action="Create" class="btn btn-primary">
 				<strong> Create new Expense </strong>
 			</a>
 		</div>
@@ -23,6 +23,7 @@
 				<tr>
 					<th> Expense </th>
 					<th> Amount </th>
+					<th>  </th>
 				</tr>
 			</thead>
 
@@ -31,8 +32,16 @@
 				@foreach (var exp in Model)
 				{
 					<tr>
-						<td width="40%"> @exp.ExpenseName </td>
-						<td width="40%"> @exp.Amount </td>
+						<td width="35%"> @exp.ExpenseName </td>
+						<td width="25%"> @exp.Amount </td>
+						<td width="35%">
+							<div class="w-100 btn-group text-right">
+								<a asp-controller="Expense" asp-action="Update" asp-route-Id="@exp.Id"
+												class="btn btn-primary  mx-1" > Update </a>
+								<a asp-controller="Expense" asp-action="Delete" asp-route-Id="@exp.Id"
+												class="btn btn-danger  mx-2 p-1" > Delete </a>
+							</div>
+						</td>
 					</tr>
 				}
 

@@ -41,8 +41,15 @@ namespace InAndOut.Controllers
 		[HttpPost]
 		public IActionResult Create(Expense exp)
 		{
-			_db.Expenses.Add(exp);
-			_db.SaveChanges();
+			if (!ModelState.IsValid)
+			{
+				return View(exp);
+			}
+			else
+			{
+				_db.Expenses.Add(exp);
+				_db.SaveChanges();
+			}
 
 			return RedirectToAction("Index");
 		}
