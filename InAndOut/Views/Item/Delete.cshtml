@@ -1,0 +1,68 @@
+﻿@model InAndOut.Models.Item
+
+<h2> Create Expenceses </h2>
+
+<form method="post" asp-action="DeletePost">
+
+	<input asp-for="Id" hidden />
+
+	<div class="border p-3">
+		<div class="form-group row">
+			<h2 class="pl-3 text-black-50 pl-3"> Delete Item </h2>
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="ItemName" class="col-lg-2 col-form-label"></label>
+			<div class="col-6">
+				<input asp-for="ItemName" type="text" class="form-control"
+					   id="expenseName" placeholder="expencese" disabled>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="Borrower" class="col-2 col-form-label"></label>
+			<div class="col-5">
+				<input asp-for="Borrower" type="text" class="form-control"
+					   id="amount" placeholder="amount" disabled>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="Lender" class="col-2 col-form-label"></label>
+			<div class="col-5">
+				<input asp-for="Lender" type="text" class="form-control"
+					   id="amount" placeholder="amount" disabled>
+			</div>
+		</div>
+
+
+		<br />
+
+		<div class="col-auto p-1">
+			<input type="submit" class="btn btn-danger w-25" value="Delete"
+				   style="font-size: 1.2rem;" />
+		</div>
+
+	</div>
+
+	@*width="75"*@
+	@*<button type="submit" class="btn btn-primary">Create</button>*@
+
+</form>
+
+<br />
+<br />
+
+<div>
+	<a asp-controller="Expense" asp-action="Index"
+	   class="btn btn-outline-info w-25">
+		Back to the List
+	</a>
+</div>
+
+@* Validation Client-side:
+	---------------------- *@
+
+@section scripts{
+	<partial name="_ValidationScriptsPartial" />
+}

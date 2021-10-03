@@ -18,7 +18,6 @@
 	@if (Model.Count() > 0)
 	{
 		<table class="table table-bordered table-striped">
-
 			<thead>
 				<tr>
 					<th> Expense </th>
@@ -26,7 +25,6 @@
 					<th>  </th>
 				</tr>
 			</thead>
-
 			<tbody>
 
 				@foreach (var exp in Model)
@@ -35,18 +33,21 @@
 						<td width="35%"> @exp.ExpenseName </td>
 						<td width="25%"> @exp.Amount </td>
 						<td width="35%">
-							<div class="w-100 btn-group text-right">
-								<a asp-controller="Expense" asp-action="Update" asp-route-Id="@exp.Id"
-												class="btn btn-primary  mx-1" > Update </a>
-								<a asp-controller="Expense" asp-action="Delete" asp-route-Id="@exp.Id"
-												class="btn btn-danger  mx-2 p-1" > Delete </a>
+																@*text-right*@
+							<div class="w-100 btn-group" role="group">
+								<a asp-controller="Expense" asp-action="Update"
+								   asp-route-Id="@exp.Id"
+								   class="btn btn-primary  mx-2 "> Update	</a>
+
+								<a asp-controller="Expense" asp-action="Delete"
+								   asp-route-id="@exp.Id"
+								   class="btn btn-danger  mx-2 "> Delete	</a>
 							</div>
 						</td>
 					</tr>
 				}
 
 			</tbody>
-
 		</table>
 	}
 

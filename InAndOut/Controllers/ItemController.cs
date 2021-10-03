@@ -29,10 +29,24 @@ namespace InAndOut.Controllers
 			return View(objList);
 		}
 
+	//	GET : Index/id  -  Item(id)
+
+		public IActionResult Details(int? id)
+		{
+			if (id == null)
+				return NotFound();
+
+			Item item = _db.Items.Find(id);
+
+			if (item == null)
+				return NotFound();
+
+			return View(item);
+		}
+
 	//	GET: Create
 		public IActionResult Create()
 		{
-
 			return View();
 		}
 
@@ -47,6 +61,42 @@ namespace InAndOut.Controllers
 
 			return RedirectToAction("Index");
 		}
+
+	// GET : Delete
+
+		public IActionResult Delete(int? id)
+		{
+			if (id == null || id == 0)
+			{
+				return NotFound();
+			}
+
+			var delItem = _db.Items.Find(id);
+
+			if (delItem == null)
+				return NotFound();
+
+			return View(delItem);
+		}
+
+	// POST : Delete
+
+		[HttpPost]
+		public IActionResult DeletePost(int? id)
+		{
+			var delItem = _db.Items.Find(id);
+
+			if (delItem == null)
+			{
+				return NotFound(delItem);
+			}
+
+				_db.Items.Remove(delItem);
+				_db.SaveChanges();
+
+			return RedirectToAction("Index");
+		}
+
 
 	}
 }

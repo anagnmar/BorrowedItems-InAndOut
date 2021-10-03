@@ -434,3 +434,5 @@ E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Item\Create.cshtml.g.cs
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expense\Index.cshtml.g.cs
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expense\Create.cshtml.g.cs
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expense\Delete.cshtml.g.cs
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Item\Delete.cshtml.g.cs
