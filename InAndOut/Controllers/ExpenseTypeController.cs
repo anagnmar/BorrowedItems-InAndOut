@@ -9,45 +9,44 @@ using Microsoft.AspNetCore.Mvc;
 using InAndOut.Data;
 using InAndOut.Models;
 
-
 namespace InAndOut.Controllers
 {
-	public class ExpenseController : Controller
+	public class ExpenseTypeController : Controller
 	{
 		private readonly ApplicationDBContext _db;
 
-		public ExpenseController(ApplicationDBContext db)
+		public ExpenseTypeController(ApplicationDBContext db)
 		{
 			_db = db;
 		}
 
 
-	//	GET : INDEX / ALL EXPENSES
+		//	GET : INDEX / ALL EXPENSES
 
 		public IActionResult Index()
 		{
-			IEnumerable<Expense> expList = _db.Expenses;
+			IEnumerable<ExpenseType> expTypesList = _db.ExpenseTypes;
 
-			return View(expList);
+			return View(expTypesList);
 		}
 
-	//	GET : INDEX/id  -  Expense(id)
+		//	GET : INDEX/id  -  Expense(id)
 
 		public IActionResult Details(int? id)
 		{
 			if (id == null)
 				return NotFound();
 
-			Expense expense = _db.Expenses.Find(id);
+			ExpenseType expenseType = _db.ExpenseTypes.Find(id);
 
-			if (expense == null)
+			if (expenseType == null)
 				return NotFound();
 
-			return View(expense);
+			return View(expenseType);
 		}
 
 
-	// GET : Create
+		// GET : Create
 
 		//[HttpGet]
 		public IActionResult Create()
@@ -55,19 +54,19 @@ namespace InAndOut.Controllers
 			return View();
 		}
 
-	// POST: Create
+		// POST: Create
 
 		[ValidateAntiForgeryToken]
 		[HttpPost]
-		public IActionResult Create(Expense exp)
+		public IActionResult Create(ExpenseType expType)
 		{
 			if (!ModelState.IsValid)
 			{
-				return View(exp);
+				return View(expType);
 			}
 			else
 			{
-				_db.Expenses.Add(exp);
+				_db.ExpenseTypes.Add(expType);
 				_db.SaveChanges();
 			}
 
@@ -75,7 +74,7 @@ namespace InAndOut.Controllers
 		}
 
 
-	// GET : Delete
+		// GET : Delete
 
 		public IActionResult Delete(int? id)
 		{
@@ -85,7 +84,7 @@ namespace InAndOut.Controllers
 				return NotFound();
 			}
 
-			var delObj = _db.Expenses.Find(id);
+			var delObj = _db.ExpenseTypes.Find(id);
 
 			if (delObj == null)
 				return NotFound();
@@ -93,26 +92,26 @@ namespace InAndOut.Controllers
 			return View(delObj);
 		}
 
-	// POST : Delete
+		// POST : Delete
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public IActionResult DeletePost(int? id)
 		{
-			var delExp = _db.Expenses.Find(id);
+			var delExp = _db.ExpenseTypes.Find(id);
 
 			if (delExp == null)
 				return NotFound();
-			
 
-				_db.Expenses.Remove(delExp);
-				_db.SaveChanges();
+
+			_db.ExpenseTypes.Remove(delExp);
+			_db.SaveChanges();
 
 			return RedirectToAction("Index");
 		}
 
 
-	// GET : Update
+		// GET : Update
 
 		//[HttpGet]
 		public IActionResult Update(int? id)
@@ -123,34 +122,32 @@ namespace InAndOut.Controllers
 				return NotFound();
 			}
 
-			var updObj = _db.Expenses.Find(id);
+			var updObjT = _db.ExpenseTypes.Find(id);
 
-			if (updObj == null)
+			if (updObjT == null)
 				return NotFound();
 
-			return View(updObj);
+			return View(updObjT);
 		}
 
-	// POST: Update
+		// POST: Update
 
 		[ValidateAntiForgeryToken]
 		[HttpPost]
-		public IActionResult Update(Expense upExp)
+		public IActionResult Update(ExpenseType upExpTypes)
 		{
 			if (!ModelState.IsValid)
 			{
-				return View(upExp);
+				return View(upExpTypes);
 			}
 			else
 			{
-				_db.Expenses.Update(upExp);
+				_db.ExpenseTypes.Update(upExpTypes);
 				_db.SaveChanges();
 			}
 
 			return RedirectToAction("Index");
 		}
-
-
 
 	}
 }

@@ -97,6 +97,44 @@ namespace InAndOut.Controllers
 			return RedirectToAction("Index");
 		}
 
+		// GET : Update
+
+		[HttpGet]
+		public IActionResult Update(int? id)
+		{
+
+			if (id == null || id == 0)
+			{
+				return NotFound();
+			}
+
+			var updItem = _db.Items.Find(id);
+
+			if (updItem == null)
+				return NotFound();
+
+			return View(updItem);
+		}
+
+		// POST: Update
+
+		[ValidateAntiForgeryToken]
+		[HttpPost]
+		public IActionResult Update(Item upItem)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(upItem);
+			}
+			else
+			{
+				_db.Items.Update(upItem);
+				_db.SaveChanges();
+			}
+
+			return RedirectToAction("Index");
+		}
+
 
 	}
 }

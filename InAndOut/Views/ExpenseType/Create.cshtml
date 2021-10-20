@@ -1,0 +1,59 @@
+﻿@model InAndOut.Models.ExpenseType
+
+<h2> Create new Expence Types </h2>
+
+<form method="post" asp-action="Create">
+
+	<div class="border p-3">
+		<div asp-validation-summary="All" class="text-danger"></div>
+		<div class="form-group row">
+			<h2 class="pl-3 text-black-50 pl-3"> Add Expense Type</h2>
+		</div>
+
+		@*<div class="row mb-3">
+			<label asp-for="Id" class="col-lg-2 col-form-label"></label>
+			<div class="col-6">
+				<input asp-for="Id" type="text" class="form-control"
+					   id="expenseName" placeholder="expencese">
+				<span asp-validation-for="Id" class="text-danger"></span>
+			</div>
+		</div>*@
+
+		<div class="row mb-3">
+			<label asp-for="Name" class="col-2 col-form-label"></label>
+			<div class="col-5">
+				<input asp-for="Name" type="text" class="form-control"
+					   id="amount" placeholder="type">
+				@*<span>€</span>*@
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+		</div>
+
+		<br />
+
+		<div class="col-auto p-lg-2">
+			<input type="submit" class="btn btn-success w-25" value="Create"
+				   style="font-size: 1.2rem;" />
+		</div>
+	</div>
+
+			@*width="75"*@
+			@*<button type="submit" class="btn btn-primary">Create</button>*@
+
+</form>
+
+<br />
+<br />
+
+<div>
+	<a asp-controller="ExpenseType" asp-action="Index"
+	   class="btn btn-outline-danger w-25">
+		Back to the List
+	</a>
+</div>
+
+@*	Validation Client-side:	*@
+
+@section scripts{
+	<partial name="_ValidationScriptsPartial" />
+}

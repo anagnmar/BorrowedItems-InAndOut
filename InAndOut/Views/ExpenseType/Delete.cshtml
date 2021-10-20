@@ -1,4 +1,4 @@
-﻿@model InAndOut.Models.Expense
+﻿@model InAndOut.Models.ExpenseType
 
 <h2> Create Expenceses </h2>
 
@@ -12,17 +12,17 @@
 		</div>
 
 		<div class="row mb-3">
-			<label asp-for="ExpenseName" class="col-lg-2 col-form-label"></label>
+			<label asp-for="Id" class="col-lg-2 col-form-label"></label>
 			<div class="col-6">
-				<input asp-for="ExpenseName" type="text" class="form-control"
+				<input asp-for="Id" type="text" class="form-control"
 					   id="expenseName" placeholder="expencese" disabled>
 			</div>
 		</div>
 
 		<div class="row mb-3">
-			<label asp-for="Amount" class="col-2 col-form-label"></label>
+			<label asp-for="Name" class="col-2 col-form-label"></label>
 			<div class="col-5">
-				<input asp-for="Amount" type="text" class="form-control"
+				<input asp-for="Name" type="text" class="form-control"
 					   id="amount" placeholder="amount" disabled>
 			</div>
 		</div>
@@ -45,8 +45,8 @@
 <br />
 
 <div>
-	<a asp-controller="Expense" asp-action="Index"
-	   class="btn btn-outline-danger w-25">
+	<a asp-controller="ExpenseType" asp-action="Index"
+	   class="btn btn-outline-info w-25">
 		Back to the List
 	</a>
 </div>

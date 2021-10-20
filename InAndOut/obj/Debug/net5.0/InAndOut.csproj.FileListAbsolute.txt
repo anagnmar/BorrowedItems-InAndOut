@@ -323,7 +323,6 @@ E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\InAndOut.csproj.AssemblyReference.cache
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\InAndOut.GeneratedMSBuildEditorConfig.editorconfig
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\InAndOut.AssemblyInfoInputs.cache
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\InAndOut.AssemblyInfo.cs
@@ -436,3 +435,10 @@ E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expense\Create.cshtml.g.cs
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expense\Delete.cshtml.g.cs
 E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Item\Delete.cshtml.g.cs
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expense\Update.cshtml.g.cs
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\InAndOut.csproj.AssemblyReference.cache
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Item\Update.cshtml.g.cs
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseType\Index.cshtml.g.cs
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseType\Create.cshtml.g.cs
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseType\Delete.cshtml.g.cs
+E:\ASP.NET Core\MVC\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseType\Update.cshtml.g.cs

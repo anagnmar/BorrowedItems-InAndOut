@@ -1,15 +1,15 @@
-﻿@model IEnumerable<InAndOut.Models.Expense>
+﻿@model IEnumerable<InAndOut.Models.ExpenseType>
 
 <div class="container p-3">
 
 	<div class="row pt-4 pb-4">
 		<div class="col-7">
-			<h2 class="text-primary"> Expenses List </h2>
+			<h2 class="text-primary"> Expense Type List </h2>
 		</div>
 		<div class="col-5 text-lg-right">
-			<a asp-controller="Expense" 
+			<a asp-controller="ExpenseType"
 			   asp-action="Create" class="btn btn-primary">
-				<strong> Create new Expense </strong>
+				<strong> Create new Expense Type </strong>
 			</a>
 		</div>
 	</div>
@@ -21,27 +21,25 @@
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th> Expense </th>
-					<th> Amount </th>
+					<th> Name </th>
 					<th>  </th>
 				</tr>
 			</thead>
 			<tbody>
 
-				@foreach (var exp in Model)
+				@foreach (var type in Model)
 				{
 					<tr>
-						<td width="35%"> @exp.ExpenseName </td>
-						<td width="25%"> @exp.Amount </td>
+						<td width="25%"> @type.Name </td>
 						<td width="35%">
-																@*text-right*@
+							@*text-right*@
 							<div class="w-100 btn-group" role="group">
-								<a asp-controller="Expense" asp-action="Update"
-								   asp-route-Id="@exp.Id"
+								<a asp-controller="ExpenseType" asp-action="Update"
+								   asp-route-Id="@type.Id"
 								   class="btn btn-primary  mx-2 "> Update	</a>
 
-								<a asp-controller="Expense" asp-action="Delete"
-								   asp-route-id="@exp.Id"
+								<a asp-controller="ExpenseType" asp-action="Delete"
+								   asp-route-id="@type.Id"
 								   class="btn btn-danger  mx-2 "> Delete	</a>
 							</div>
 						</td>

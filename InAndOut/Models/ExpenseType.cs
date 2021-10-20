@@ -7,18 +7,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InAndOut.Models
 {
-	public class Expense
+	public class ExpenseType
 	{
 		[Key]
 		public int Id { get; set; }
 
-		[DisplayName("Expense")]
-		[Required]
-		public string ExpenseName { get; set; }
-
-		[Required]
-		[Range(1, int.MaxValue)]
-		public double Amount { get; set; }
+		[DisplayName("Type")]
+		public string Name { get; set; }
 
 	}
 }
