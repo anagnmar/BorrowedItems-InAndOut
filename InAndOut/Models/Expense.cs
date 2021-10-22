@@ -20,5 +20,9 @@ namespace InAndOut.Models
 		[Range(1, int.MaxValue)]
 		public double Amount { get; set; }
 
+		public ExpenseType ExpenseType { get; set; }
+
+		[ForeignKey("Id")]
+		public int ExpenceTypeID { get; set; }
 	}
 }

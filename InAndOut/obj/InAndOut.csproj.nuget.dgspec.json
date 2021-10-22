@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut\\InAndOut\\InAndOut.csproj": {}
+    "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut________\\InAndOut\\InAndOut.csproj": {}
   },
   "projects": {
-    "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut\\InAndOut\\InAndOut.csproj": {
+    "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut________\\InAndOut\\InAndOut.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut\\InAndOut\\InAndOut.csproj",
+        "projectUniqueName": "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut________\\InAndOut\\InAndOut.csproj",
         "projectName": "InAndOut",
-        "projectPath": "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut\\InAndOut\\InAndOut.csproj",
+        "projectPath": "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut________\\InAndOut\\InAndOut.csproj",
         "packagesPath": "C:\\Users\\Margn\\.nuget\\packages\\",
-        "outputPath": "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut\\InAndOut\\obj\\",
+        "outputPath": "E:\\ASP.NET Core\\MVC\\ASP.NET Core 5.0 MVC - The Beginners Guide To Becoming A Pro\\InAndOut________\\InAndOut\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
