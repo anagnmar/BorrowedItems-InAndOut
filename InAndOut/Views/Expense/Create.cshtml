@@ -2,18 +2,22 @@
 
 <h2> Create Expenceses </h2>
 
+<br />
+
 <form method="post" asp-action="Create">
 
 	<div class="border p-3">
+
 		<div asp-validation-summary="All" class="text-danger"></div>
+
 		<div class="form-group row">
 			<h2 class="pl-3 text-black-50 pl-3"> Add Expense </h2>
 		</div>
 
 		<div class="row mb-3">
-			<label asp-for="ExpenseName" class="col-lg-2 col-form-label"></label>
+			<label asp-for="ExpenseName" class="col-2 col-form-label"></label>
 			<div class="col-6">
-				<input asp-for="ExpenseName" type="text" class="form-control"
+				<input asp-for="ExpenseName" type="text"	class="form-control"
 					   id="expenseName" placeholder="expencese">
 				<span asp-validation-for="ExpenseName" class="text-danger"></span>
 			</div>
@@ -21,21 +25,34 @@
 
 		<div class="row mb-3">
 			<label asp-for="Amount" class="col-2 col-form-label"></label>
-			<div class="col-5">
-				<input asp-for="Amount" type="text" class="form-control"
-					   id="amount" placeholder="amount">
-				@*<span>€</span>*@
+			<div class="col-3">
+				<input asp-for="Amount" type="text"		class="form-control"
+					   id="amount" placeholder="amount">	@*<span> € </span>*@
 				<span asp-validation-for="Amount" class="text-danger"></span>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="ExpenseType" class="col-2 col-form-label"></label>
+			<div class="col-9">
+				<select asp-for="ExpenceTypeID"		class="form-control" 
+						asp-items="ViewBag.TypeDropDown" >
+					<option> -- Select Expense Type -- </option>
+				</select>
+				<span asp-validation-for="ExpenceTypeID" class="text-danger"></span>
 			</div>
 		</div>
 
 		<br />
 
 		<div class="col-auto p-lg-2">
-			<input type="submit" class="btn btn-success w-25" value="Create" 
-												style="font-size: 1.2rem;" />
+			<input type="submit" class="btn btn-success w-25" value="Create"
+					style="font-size: 1.2rem;" />
 		</div>
 	</div>
+
+	@*</div>*@
+
 	@*width="75"*@
 	@*<button type="submit" class="btn btn-primary">Create</button>*@
 
@@ -46,7 +63,7 @@
 
 <div>
 	<a asp-controller="Expense" asp-action="Index"
-	   class="btn btn-danger w-25" >
+	   class="btn btn-outline-danger w-25" >
 		Back to the List
 	</a>
 </div>

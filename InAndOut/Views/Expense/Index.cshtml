@@ -8,7 +8,7 @@
 		</div>
 		<div class="col-5 text-lg-right">
 			<a asp-controller="Expense" 
-			   asp-action="Create" class="btn btn-primary">
+			   asp-action="Create" class="btn btn-info">
 				<strong> Create new Expense </strong>
 			</a>
 		</div>
@@ -23,7 +23,7 @@
 				<tr>
 					<th> Expense </th>
 					<th> Amount </th>
-					<th>  </th>
+					<th class="text-right">  </th>
 				</tr>
 			</thead>
 			<tbody>
@@ -32,13 +32,13 @@
 				{
 					<tr>
 						<td width="35%"> @exp.ExpenseName </td>
-						<td width="25%"> @exp.Amount </td>
-						<td width="35%">
+						<td width="13%"> @exp.Amount </td>
+						<td width="30%">
 																@*text-right*@
-							<div class="w-100 btn-group" role="group">
+							<div class="w-100 btn-group text-right" role="group">
 								<a asp-controller="Expense" asp-action="Update"
 								   asp-route-Id="@exp.Id"
-								   class="btn btn-primary  mx-2 "> Update	</a>
+								   class="btn btn-primary  mx-2 text-right"> Update	</a>
 
 								<a asp-controller="Expense" asp-action="Delete"
 								   asp-route-id="@exp.Id"
